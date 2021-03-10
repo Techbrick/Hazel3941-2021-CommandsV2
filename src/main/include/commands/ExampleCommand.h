@@ -7,7 +7,7 @@
 #include <frc2/command/CommandBase.h>
 #include <frc2/command/CommandHelper.h>
 
-#include "subsystems/ExampleSubsystem.h"
+#include "subsystems/DriveSubsystem.h"
 
 /**
  * An example command that uses an example subsystem.
@@ -18,14 +18,14 @@
  */
 class ExampleCommand
     : public frc2::CommandHelper<frc2::CommandBase, ExampleCommand> {
- public:
+  public:
   /**
    * Creates a new ExampleCommand.
    *
    * @param subsystem The subsystem used by this command.
    */
-  explicit ExampleCommand(ExampleSubsystem* subsystem);
+  explicit ExampleCommand(DriveSubsystem* subsystem);
 
- private:
-  ExampleSubsystem* m_subsystem;
+  private:
+  DriveSubsystem* m_drive;
 };
